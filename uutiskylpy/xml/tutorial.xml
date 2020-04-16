@@ -1,0 +1,16 @@
+<mw-sentence start="0" end="50">
+	<mw-finnish>
+		<mw-word id="1">Tällä tavalla</mw-word>
+		<mw-word id="2">käytät </mw-word>
+		<mw-word id="3">Uutiskylpy </mw-word>
+		<mw-word id="4">sovellusta</mw-word>
+	</mw-finnish>
+	<mw-arabic>
+		<mw-word finnish-id="1">هذه هي الطريقة </mw-word>
+		<mw-word finnish-id="2">التي تستخدم </mw-word>
+		<mw-word finnish-id="4"> فيها  التطبيق </mw-word>
+		<mw-word finnish-id="3">Uutiskylpy </mw-word>
+	</mw-arabic>
+	<mw-tooltips>
+	</mw-tooltips>
+</mw-sentence>

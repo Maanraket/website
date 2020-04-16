@@ -1,0 +1,147 @@
+<mw-sentence start="0" end="5">
+	<mw-finnish>
+		<mw-word id="1">Ihminen </mw-word>
+		<mw-word id="2">ymmärtää </mw-word>
+		<mw-word id="3">huumoria </mw-word>
+		<mw-word id="4">heti, </mw-word>
+		<mw-word id="5">kun </mw-word>
+		<mw-word id="6">hän syntyy.</mw-word>
+	</mw-finnish>
+	<mw-arabic>
+		<mw-word finnish-id="1">الشخص </mw-word>
+		<mw-word finnish-id="2">يفهم </mw-word>
+		<mw-word finnish-id="3">الفكاهة </mw-word>
+		<mw-word finnish-id="4">فورا, </mw-word>
+		<mw-word finnish-id="5">عندما </mw-word>
+		<mw-word finnish-id="6">يولد.</mw-word>
+	</mw-arabic>
+	<mw-tooltips>
+		<mw-tooltip finnish-id="">
+			<finnish-part id="1"></finnish-part>
+			<finnish-part id="2"></finnish-part>
+			<arabic-part finnish-id="1"></arabic-part>
+			<arabic-part finnish-id="2"></arabic-part>
+		</mw-tooltip>
+	</mw-tooltips>
+</mw-sentence>
+
+<mw-sentence start="5" end="22">
+	<mw-finnish>
+		<mw-word id="1">Vauvaa </mw-word>
+		<mw-word id="2">naurattaa </mw-word>
+		<mw-word id="3">esimerkiksi </mw-word>
+		<mw-word id="4">silloin, </mw-word>
+		<mw-word id="5">kun </mw-word>
+		<mw-word id="6">hänelle </mw-word>
+		<mw-word id="7">tehdään </mw-word>
+		<mw-word id="8">joku </mw-word>
+		<mw-word id="9">mukava </mw-word>
+		<mw-word id="10">yllätys, </mw-word>
+		<mw-word id="11">esimerkiksi </mw-word>
+		<mw-word id="12">äidin </mw-word>
+		<mw-word id="13">tai </mw-word>
+		<mw-word id="14">isän </mw-word>
+		<mw-word id="15">kasvot </mw-word>
+		<mw-word id="16">kurkistavat </mw-word>
+		<mw-word id="17">piilosta </mw-word>
+		<mw-word id="18">yhtäkkiä. </mw-word>
+	</mw-finnish>
+	<mw-arabic>
+		<mw-word finnish-id="1">الرضيع </mw-word>
+		<mw-word finnish-id="2">يضحك </mw-word>
+		<mw-word finnish-id="4">عندما </mw-word>
+		<mw-word finnish-id="3">مثلا, </mw-word>
+		<mw-word finnish-id="5">عندما </mw-word>
+		<mw-word finnish-id="7">يعد </mw-word>
+		<mw-word finnish-id="6">له </mw-word>
+		<mw-word finnish-id="8"> شخص ما </mw-word>
+		<mw-word finnish-id="10">مفاجأة </mw-word>
+		<mw-word finnish-id="9">جميلة, </mw-word>
+		<mw-word finnish-id="11">مثلا </mw-word>
+		<mw-word finnish-id="12">الام </mw-word>
+		<mw-word finnish-id="13">او </mw-word>
+		<mw-word finnish-id="14">الاب </mw-word>
+		<mw-word finnish-id="17">يخبئ </mw-word>
+		<mw-word finnish-id="15">وجهه </mw-word>
+		<mw-word finnish-id="16">ويظهره </mw-word>
+		<mw-word finnish-id="18">فجأة </mw-word>
+	</mw-arabic>
+	<mw-tooltips>
+		<mw-tooltip finnish-id="">
+			<finnish-part id="1"></finnish-part>
+			<finnish-part id="2"></finnish-part>
+			<arabic-part finnish-id="1"></arabic-part>
+			<arabic-part finnish-id="2"></arabic-part>
+		</mw-tooltip>
+	</mw-tooltips>
+</mw-sentence>
+
+<mw-sentence start="22" end="34">
+	<mw-finnish>
+		<mw-word id="1">Vauva </mw-word>
+		<mw-word id="2">oppii </mw-word>
+		<mw-word id="3">kuitenkin </mw-word>
+		<mw-word id="4">hymyilemään </mw-word>
+		<mw-word id="5">ja </mw-word>
+		<mw-word id="6">nauramaan </mw-word>
+		<mw-word id="7">vain, </mw-word>
+		<mw-word id="8">jos </mw-word>
+		<mw-word id="9">muut </mw-word>
+		<mw-word id="10">ihmiset </mw-word>
+		<mw-word id="11">hymyilevät </mw-word>
+		<mw-word id="12">ja </mw-word>
+		<mw-word id="13">leikkivät</mw-word>
+		<mw-word id="14">vauvan kanssa. </mw-word>
+	</mw-finnish>
+	<mw-arabic>
+		<mw-word finnish-id="3">مع ذلك </mw-word>
+		<mw-word finnish-id="1">الرضيع </mw-word>
+		<mw-word finnish-id="2">يتعلم </mw-word>
+		<mw-word finnish-id="6">الضحك </mw-word>
+		<mw-word finnish-id="5">و </mw-word>
+		<mw-word finnish-id="4">الابتسامة</mw-word>
+		<mw-word finnish-id="7">فقط </mw-word>
+		<mw-word finnish-id="8">اذا </mw-word>
+		<mw-word finnish-id="11">ابتسم </mw-word>
+		<mw-word finnish-id="12">و </mw-word>
+		<mw-word finnish-id="13">لعب </mw-word>
+		<mw-word finnish-id="14">مع الرضيع </mw-word>
+		<mw-word finnish-id="10">اشخاص </mw-word>
+		<mw-word finnish-id="9">اخرين.</mw-word>
+	</mw-arabic>
+	<mw-tooltips>
+		<mw-tooltip finnish-id="">
+			<finnish-part id="1"></finnish-part>
+			<finnish-part id="2"></finnish-part>
+			<arabic-part finnish-id="1"></arabic-part>
+			<arabic-part finnish-id="2"></arabic-part>
+		</mw-tooltip>
+	</mw-tooltips>
+</mw-sentence>
+
+<mw-sentence start="34" end="40">
+	<mw-finnish>
+		<mw-word id="1">Vauvan </mw-word>
+		<mw-word id="2">on helppo </mw-word>
+		<mw-word id="3">hymyillä, </mw-word>
+		<mw-word id="4">kun </mw-word>
+		<mw-word id="5">hän voi </mw-word>
+		<mw-word id="6">hyvin.</mw-word>
+	</mw-finnish>
+	<mw-arabic>
+		<mw-word finnish-id="1">الرضيع </mw-word>
+		<mw-word finnish-id="3">يبتسم </mw-word>
+		<mw-word finnish-id="2">بسهولة, </mw-word>
+		<mw-word finnish-id="4">عندما </mw-word>
+		<mw-word finnish-id="5">يكون </mw-word>
+		<mw-word finnish-id="6">بخير.</mw-word>
+	</mw-arabic>
+	<mw-tooltips>
+		<mw-tooltip finnish-id="">
+			<finnish-part id="1"></finnish-part>
+			<finnish-part id="2"></finnish-part>
+			<arabic-part finnish-id="1"></arabic-part>
+			<arabic-part finnish-id="2"></arabic-part>
+		</mw-tooltip>
+	</mw-tooltips>
+</mw-sentence>

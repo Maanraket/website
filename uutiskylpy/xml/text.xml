@@ -1,0 +1,94 @@
+<mw-sentence start="0" end="5">
+	<mw-finnish>
+
+		<mw-word id="1">Suomessa </mw-word>
+		<mw-word id="2">päivät </mw-word>
+		<mw-word id="3">alkavat </mw-word>
+		<mw-word id="4">pidentyä </mw-word>
+		<mw-word id="5">joulukuun </mw-word>
+		<mw-word id="6">jälkeen</mw-word>
+	</mw-finnish>
+	<mw-arabic>
+		<mw-word finnish-id="1">فى فنلندا</mw-word>
+		<mw-word finnish-id="2">فترة النهار</mw-word>
+		<mw-word finnish-id="4">فى تذايد</mw-word>
+		<mw-word finnish-id="5">شهر ديسمبر</mw-word>
+		<mw-word finnish-id="6">موز</mw-word>
+		<mw-word finnish-id="3">تبدا</mw-word>
+	</mw-arabic>
+	<mw-tooltips>
+	</mw-tooltips>
+</mw-sentence>
+
+<mw-sentence start="5" end="10">
+	<mw-finnish>
+		
+		<mw-word id="1">Aluksi </mw-word>
+		<mw-word id="2">päivät </mw-word>
+		<mw-word id="3">pitenevät </mw-word>
+		<mw-word id="4">tosi </mw-word>
+		<mw-word id="5">hitaasti, </mw-word>
+		<mw-word id="6">vain </mw-word>
+		<mw-word id="7">noin </mw-word>
+		<mw-word id="8">5 </mw-word>
+		<mw-word id="9">minuuttia </mw-word>
+		<mw-word id="10">viikossa.</mw-word>
+	</mw-finnish>
+	<mw-arabic>
+		<mw-word finnish-id="1">فى البداية</mw-word>
+		<mw-word finnish-id="2">فترة النهار</mw-word>
+		<mw-word finnish-id="3">يمتد</mw-word>
+		<mw-word finnish-id="4">شديد</mw-word>
+		<mw-word finnish-id="5">ببطء</mw-word>
+		<mw-word finnish-id="6">فقد</mw-word>
+		<mw-word finnish-id="7">بحوالي</mw-word>
+		<mw-word finnish-id="8">خمسة</mw-word>
+		<mw-word finnish-id="9">دقيقة</mw-word>
+		<mw-word finnish-id="10">أُسْبوع فى</mw-word>
+	</mw-arabic>
+	<mw-tooltips>
+		<mw-tooltip finnish-id="10">
+			<finnish-part id="1">viikko</finnish-part>
+			<finnish-part id="2">ssa</finnish-part>
+			<arabic-part finnish-id="2">فى </arabic-part>
+			<arabic-part finnish-id="1">أُسْبوع</arabic-part>
+		</mw-tooltip>
+	</mw-tooltips>
+</mw-sentence>
+
+
+<mw-sentence start="10" end="13">
+	<mw-finnish>
+		
+		<mw-word id="1">Aluksi </mw-word>
+		<mw-word id="2">päivät </mw-word>
+		<mw-word id="3">pitenevät </mw-word>
+		<mw-word id="4">tosi </mw-word>
+		<mw-word id="5">hitaasti, </mw-word>
+		<mw-word id="6">vain </mw-word>
+		<mw-word id="7">noin </mw-word>
+		<mw-word id="8">5 </mw-word>
+		<mw-word id="9">minuuttia </mw-word>
+		<mw-word id="10">viikossa.</mw-word>
+	</mw-finnish>
+	<mw-arabic>
+		<mw-word finnish-id="1">فى البداية</mw-word>
+		<mw-word finnish-id="2">فترة النهار</mw-word>
+		<mw-word finnish-id="3">يمتد</mw-word>
+		<mw-word finnish-id="4">شديد</mw-word>
+		<mw-word finnish-id="5">ببطء</mw-word>
+		<mw-word finnish-id="6">فقد</mw-word>
+		<mw-word finnish-id="7">بحوالي</mw-word>
+		<mw-word finnish-id="8">خمسة</mw-word>
+		<mw-word finnish-id="9">دقيقة</mw-word>
+		<mw-word finnish-id="10">أُسْبوع فى</mw-word>
+	</mw-arabic>
+	<mw-tooltips>
+		<mw-tooltip finnish-id="10">
+			<finnish-part id="1">viikko</finnish-part>
+			<finnish-part id="2">ssa</finnish-part>
+			<arabic-part finnish-id="1">kjnasd</arabic-part>
+			<arabic-part finnish-id="2">lkjanmsd</arabic-part>
+		</mw-tooltip>
+	</mw-tooltips>
+</mw-sentence>

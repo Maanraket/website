@@ -1,0 +1,198 @@
+<mw-sentence start="0" end="5">
+	<mw-finnish>
+		<mw-word id="1">Afrikassa </mw-word>
+		<mw-word id="2">yritetään </mw-word>
+		<mw-word id="3">suojella </mw-word>
+		<mw-word id="4">norsuja. </mw-word>
+	</mw-finnish>
+	<mw-arabic>
+		<mw-word finnish-id="1">في افريقيا</mw-word>
+		<mw-word finnish-id="2">يحاولون </mw-word>
+		<mw-word finnish-id="3">حماية </mw-word>
+		<mw-word finnish-id="4">الفيلة.</mw-word>
+	</mw-arabic>
+	<mw-tooltips>
+		<mw-tooltip finnish-id="1">
+			<finnish-part id="1">Afrikka</finnish-part>
+			<finnish-part id="2">ssa</finnish-part>
+			<arabic-part finnish-id="2">في</arabic-part>
+			<arabic-part finnish-id="1">افريقيا</arabic-part>
+		</mw-tooltip>
+	</mw-tooltips>
+</mw-sentence>
+
+<mw-sentence start="5" end="13">
+	<mw-finnish>
+		<mw-word id="1">Norsut </mw-word>
+		<mw-word id="2">voivat </mw-word>
+		<mw-word id="3">jopa </mw-word>
+		<mw-word id="4">kadota </mw-word>
+		<mw-word id="5">Afrikasta, </mw-word>
+		<mw-word id="6">koska niitä </mw-word>
+		<mw-word id="7">metsästetään </mw-word>
+		<mw-word id="8">salaa. </mw-word>
+	</mw-finnish>
+	<mw-arabic>
+		<mw-word finnish-id="1">الفيلة </mw-word>
+		<mw-word finnish-id="2">يمكن </mw-word>
+		<mw-word finnish-id="3">ان </mw-word>
+		<mw-word finnish-id="4">تختفي </mw-word>
+		<mw-word finnish-id="5">من افريقيا, </mw-word>
+		<mw-word finnish-id="6">لانها </mw-word>
+		<mw-word finnish-id="7">تصطاد </mw-word>
+		<mw-word finnish-id="8">سرا.</mw-word>
+	</mw-arabic>
+	<mw-tooltips>
+		<mw-tooltip finnish-id="5">
+			<finnish-part id="1">Afrikka</finnish-part>
+			<finnish-part id="2">sta</finnish-part>
+			<arabic-part finnish-id="2">من</arabic-part>
+			<arabic-part finnish-id="1">افريقيا</arabic-part>
+		</mw-tooltip>
+	</mw-tooltips>
+</mw-sentence>
+
+<mw-sentence start="13" end="21">
+	<mw-finnish>
+		<mw-word id="1">Salametsästäjät </mw-word>
+		<mw-word id="2">tappavat </mw-word>
+		<mw-word id="3">noin </mw-word>
+		<mw-word id="4">30 000 </mw-word>
+		<mw-word id="5">norsua </mw-word>
+		<mw-word id="6">vuodessa. </mw-word>
+	</mw-finnish>
+	<mw-arabic>
+		<mw-word finnish-id="1">الصيادون السرييون </mw-word>
+		<mw-word finnish-id="2">يقتلون </mw-word>
+		<mw-word finnish-id="3">حوالي </mw-word>
+		<mw-word finnish-id="4">30000 </mw-word>
+		<mw-word finnish-id="5">فيل </mw-word>
+		<mw-word finnish-id="6">في السنة.</mw-word>
+	</mw-arabic>
+	<mw-tooltips>
+		<mw-tooltip finnish-id="6">
+			<finnish-part id="1">vuosi</finnish-part>
+			<finnish-part id="2">ssa</finnish-part>
+			<arabic-part finnish-id="2">في</arabic-part>
+			<arabic-part finnish-id="1">السنة</arabic-part>
+		</mw-tooltip>
+	</mw-tooltips>
+</mw-sentence>
+
+<mw-sentence start="21" end="29">
+	<mw-finnish>
+		<mw-word id="1">He </mw-word>
+		<mw-word id="2">myyvät </mw-word>
+		<mw-word id="3">norsunluuta, </mw-word>
+		<mw-word id="4">vaikka </mw-word>
+		<mw-word id="5">norsunluun </mw-word>
+		<mw-word id="6">kauppa </mw-word>
+		<mw-word id="7">on kielletty.</mw-word>
+	</mw-finnish>
+	<mw-arabic>
+		<mw-word finnish-id="1">هم </mw-word>
+		<mw-word finnish-id="2">يبيعون </mw-word>
+		<mw-word finnish-id="3">عاج الفيلة, </mw-word>
+		<mw-word finnish-id="4"> مع ان </mw-word>
+		<mw-word finnish-id="6">تجارة </mw-word>
+		<mw-word finnish-id="5">العاج </mw-word>
+		<mw-word finnish-id="7">ممنوع.</mw-word>
+	</mw-arabic>
+	<mw-tooltips>
+		<mw-tooltip finnish-id="">
+			<finnish-part id="1"></finnish-part>
+			<finnish-part id="2"></finnish-part>
+			<arabic-part finnish-id="1"></arabic-part>
+			<arabic-part finnish-id="2"></arabic-part>
+		</mw-tooltip>
+	</mw-tooltips>
+</mw-sentence>
+
+<mw-sentence start="29" end="34">
+	<mw-finnish>
+		<mw-word id="1">Afrikan </mw-word>
+		<mw-word id="2">mailla </mw-word>
+		<mw-word id="3">on </mw-word>
+		<mw-word id="4">nyt </mw-word>
+		<mw-word id="5">kokous </mw-word>
+		<mw-word id="6">Keniassa. </mw-word>
+	</mw-finnish>
+	<mw-arabic>
+		<mw-word finnish-id="2">دول </mw-word>
+		<mw-word finnish-id="1">افريقيا </mw-word>
+		<mw-word finnish-id="3"></mw-word> <!-- There's no translation for this word in arabic! -->
+		<mw-word finnish-id="3">الان </mw-word>
+		<mw-word finnish-id="4">اجتماع </mw-word>
+		<mw-word finnish-id="5"> في كينا.</mw-word>
+	</mw-arabic>
+	<mw-tooltips>
+		<mw-tooltip finnish-id="6">
+			<finnish-part id="1">Kenia</finnish-part>
+			<finnish-part id="2">ssa</finnish-part>
+			<arabic-part finnish-id="2">في</arabic-part>
+			<arabic-part finnish-id="1">كينا</arabic-part>
+		</mw-tooltip>
+	</mw-tooltips>
+</mw-sentence>
+
+<mw-sentence start="34" end="41">
+	<mw-finnish>
+		<mw-word id="1">Maat </mw-word>
+		<mw-word id="2">etsivät </mw-word>
+		<mw-word id="3">keinoja </mw-word>
+		<mw-word id="4">lopettaa </mw-word>
+		<mw-word id="5">norsunluun </mw-word>
+		<mw-word id="6">kauppa. </mw-word>
+	</mw-finnish>
+	<mw-arabic>
+		<mw-word finnish-id="1">البلدان </mw-word>
+		<mw-word finnish-id="2">بحثن </mw-word>
+		<mw-word finnish-id="3">في وسائل </mw-word>
+		<mw-word finnish-id="4">ايقاف </mw-word>
+		<mw-word finnish-id="6">تجارة </mw-word>
+		<mw-word finnish-id="5">العاج.</mw-word>
+	</mw-arabic>
+	<mw-tooltips>
+		<mw-tooltip finnish-id="">
+			<finnish-part id="1"></finnish-part>
+			<finnish-part id="2"></finnish-part>
+			<arabic-part finnish-id="1"></arabic-part>
+			<arabic-part finnish-id="2"></arabic-part>
+		</mw-tooltip>
+	</mw-tooltips>
+</mw-sentence>
+
+<mw-sentence start="41" end="53">
+	<mw-finnish>
+		<mw-word id="1">Kokouksessa </mw-word>
+		<mw-word id="2">poltetaan </mw-word>
+		<mw-word id="3">lauantaina </mw-word>
+		<mw-word id="4">yli </mw-word>
+		<mw-word id="5">100 000 kiloa </mw-word>
+		<mw-word id="6">norsunluuta, </mw-word>
+		<mw-word id="7">jonka </mw-word>
+		<mw-word id="8">poliisi </mw-word>
+		<mw-word id="9">on kerännyt </mw-word>
+		<mw-word id="10">salametsästäjiltä.</mw-word>
+	</mw-finnish>
+	<mw-arabic>
+		<mw-word finnish-id="3">السبت </mw-word>
+		<mw-word finnish-id="1">في الاجتماع </mw-word>
+		<mw-word finnish-id="2">احرقو </mw-word>
+		<mw-word finnish-id="4">اكثر من </mw-word>
+		<mw-word finnish-id="5">100000 كيلو غرام </mw-word>
+		<mw-word finnish-id="6"> من العاج, </mw-word>
+		<mw-word finnish-id="7">التي </mw-word>
+		<mw-word finnish-id="9">جمعتها </mw-word>
+		<mw-word finnish-id="8">الشرطة </mw-word>
+		<mw-word finnish-id="10"> من الصيد الغير مشروع.</mw-word>
+	</mw-arabic>
+	<mw-tooltips>
+		<mw-tooltip finnish-id="1">
+			<finnish-part id="1">Kokous</finnish-part>
+			<finnish-part id="2">ssa</finnish-part>
+			<arabic-part finnish-id="2">في</arabic-part>
+			<arabic-part finnish-id="1">الاجتماع</arabic-part>
+		</mw-tooltip>
+	</mw-tooltips>
+</mw-sentence>

@@ -1,0 +1,409 @@
+html,body{
+	height: 100%;
+	background: #f9f9f9;
+}
+
+mw-finnish mw-word, finnish-part, h1{
+	font-family: "Open Sans", sans-serif;
+}
+
+.container {
+	max-width: 480px;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	background: #fff;
+	position: relative;
+}
+
+.no-padding{
+	padding: 0!important;
+}
+
+video{
+	display: block;
+	flex-grow: 0;
+	min-width: 100%;
+	background-color: #000;
+}
+
+.video-overlay, .video-playbutton{
+	position: absolute;
+	text-align: center;
+	top: 50px;
+	width: 100%;
+	display: none;
+	box-sizing: border-box;
+	padding: 80px 0 0 0;
+}
+
+.video-playbutton{
+	top: 30px;
+}
+
+.video-overlay.active, .video-playbutton.active{
+	display: block;
+}
+
+.video-overlay.first a:first-child{
+	visibility: hidden;
+}
+.video-overlay.last a:last-child{
+	visibility: hidden;
+}
+
+.video-overlay a, .video-playbutton a{
+	color: #fff;
+	font-size: 50px;
+	padding: 0 20px;
+	text-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+#header{
+	flex-grow: 0;
+	height: 50px;
+	background-color: #449cb9;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	flex-shrink: 0;
+}
+
+#header .branding{
+	flex-grow: 1;
+	text-align: center;
+	line-height: 0;
+}
+
+#header img{
+	max-height: 50px;
+	padding: 10px;
+	box-sizing: border-box;
+	display: inline-block;
+	width: 50px;
+	margin: 0;
+    vertical-align:top;
+    flex-grow: 0;
+}
+
+#header h1{
+	display: inline-block;
+	font-size: 18px;
+	color: white;
+	margin: 0;
+	padding: 16px 0;
+}
+
+.header-button{
+	width: 50px;
+	height: 50px;
+	box-sizing: border-box;
+	padding: 15px;
+	font-size: 18px;
+	flex-grow: 0;
+	color: #fff;
+}
+
+#timeline{
+	flex-grow: 0;
+	min-height: 20px;
+	background: #eee;
+	display: flex;
+}
+
+#timeline a{
+	text-align: center;
+	display: box;
+	box-sizing: border-box;
+	padding: 10px 0;
+	flex: 1 1;
+	border-right: 1px solid #fff;
+	position: relative;
+}
+
+#timeline a:last-child{
+	border: none;
+}
+
+#timeline a.complete{
+	background-color: #165b61;
+}
+
+#timeline a.active{
+	background-color: #449cb9;
+}
+
+
+#timeline a.complete:after{
+	border-color: transparent transparent transparent #165b61!important;
+}
+#timeline a.active:after{
+	border-color: transparent transparent transparent #449cb9!important;
+}
+
+
+
+#timeline a:not(:last-child):after{
+	content: "";
+	display: block;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 10px 0 10px 10px;
+	border-color: transparent transparent transparent #eee;
+	position: absolute;
+	z-index: 2;
+	right: -10px;
+	top: 0;
+}
+
+mw-sentence{
+	display: block;
+	flex: 1 1;
+	display: flex;
+	flex-direction: column;
+}
+
+mw-finnish, mw-arabic{
+	flex: 1;
+	box-shadow: 0 1px 0 #bbb;
+	text-align: center;
+	padding: 0px 20px 0 20px;
+	box-sizing: border-box;
+}
+
+mw-arabic, span.arabic{
+	direction: rtl;
+}
+
+mw-finnish{
+	z-index: 10;
+	font-size: 0;
+}
+
+mw-word{
+	display: inline-block;
+	margin: 5px 2px;
+	font-size: 20px;
+	padding: 3px 5px;
+}
+
+
+mw-arabic mw-word{
+	opacity: 0;
+	transition: .3s;
+}
+
+mw-sentence.active mw-arabic mw-word{
+	opacity: 1;
+	text-shadow: 1px 1px 1px #fff;
+}
+
+mw-sentece.active mw-finnish mw-word{
+	text-shadow: 1px 1px 1px #fff;
+}
+
+mw-sentence:not(.active) mw-finnish mw-word{
+	background: transparent!important;
+}
+
+mw-sentence:not(.active) mw-word{
+	border-color: rgba(0,0,0,0)!important;
+}
+
+#tooltip{
+	position: absolute;
+	width: 100%;
+	bottom: 0;
+	left: 0;
+	background: #fff;
+	text-align: center;
+	z-index: 10;
+	opacity: 0;
+	padding: 20px 0;
+	transition: .3s;
+	font-size: 20px;
+}
+
+#tooltip.active{
+	display: block;
+	opacity: 1;
+}
+
+mw-sentence mw-finnish mw-word.active{
+	border-bottom: 2px solid #09f!important;
+}
+
+mw-tooltips{
+	display: none;
+}
+mw-tooltip finnish-part:last-of-type:after{
+	white-space: pre;content:'\A';;
+}
+
+
+/* Content list */
+
+ul.main-menu{
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+.main-menu li{
+	margin: 0;
+	padding: 0;
+	display: block;
+	width: 100%;
+	border-bottom: 1px solid #ccc;
+}
+
+.main-menu li a{
+	display: block;
+	width: 100%;
+	min-height: 100px;
+	text-decoration: none;
+	position: relative;
+	padding: 10px 0 0 0;
+	background: #fff;
+}
+
+.main-menu li a:hover{
+	background-color: #def;
+}
+
+.main-menu img{
+	display: block;
+	width: 130px;
+	height: 130px;
+	float: left;
+	margin: -10px 20px 0 0;
+}
+
+.main-menu span{
+	font-family: 'Open Sans', sans-serif;
+	line-height: 1.5em;
+}
+
+.main-menu .title{
+	padding: 20px 0 0 0;
+	font-size: 16px;
+	font-weight: bold;
+	color: #000;
+}
+
+.main-menu .date{
+	font-size: 14px;
+	color: #333;
+}
+
+.main-menu .duration{
+	padding: 20px;
+	font-size: 14px;
+	color: #333;
+}
+.main-menu .duration, .main-menu .date{
+	margin-top: 10px 0;
+	display: inline-block;
+}
+
+#quiz{
+	position: absolute;
+	width: 80%;
+	height: 80%;
+	top: 10%;
+	left: 10%;
+	background-color: white;
+	box-shadow: 0 20px 40px rgba(0,0,0,.2);
+	z-index: 1000;
+	display: none;
+	opacity: 0;
+	transition: .5s;
+}
+
+
+#quiz.active{
+	opacity: 1;
+	display: block;
+}
+
+#quiz .title{
+	font-size: 16px;
+	display: block;
+	text-align: center;
+	width: 100%;
+	padding: 50px 0 0 0;
+}
+
+
+#quiz .question{
+	font-size: 22px;
+	display: block;
+	text-align: center;
+	width: 100%;
+	padding: 50px 0 0 0;
+	font-weight: bold;
+}
+
+#quiz .answers{
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+	display: block;
+	position: absolute;
+	height: 200px;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+}
+
+#quiz .answers li{
+	display: block;
+	width: 50%;
+	height: 50%;
+	float: left;
+	text-align: center;
+	box-sizing: border-box;
+	padding: 40px 0 0 0;
+	font-size: 14px;
+	border-top: 1px solid #ccc;
+	cursor: pointer;
+}
+#quiz .answers li:nth-child(even){
+	border-left: 1px solid #ccc;
+}
+
+#quiz .answers li:hover{
+	background-color: #eee;
+}
+
+#quiz .answers li.correct.active{
+	background: #cfc;
+	color: #fff;
+}
+
+#quiz .answers li.wrong{
+	background: #Faa;
+	color: #fff;
+}
+
+mw-sentence .glyphicon{
+	display: block;
+	position: absolute;
+	top: 100%;
+	right: 0;
+	margin: -50px 0 0 0;
+	width: 50px;
+	height: 50px;
+	box-sizing: border-box;
+	font-size: 25px;
+	padding: 12px;
+	color: #000;
+	background: #fff;
+	z-index: 10000;
+	color: #666;
+}
+
+mw-sentence.active .glyphicon{
+	display: none;
+}

@@ -1,0 +1,102 @@
+<mw-sentence start="0" end="7">
+	<mw-finnish>
+		<mw-word id="1">Etelässä </mw-word>
+		<mw-word id="2">sataa sadekuuroja, </mw-word>
+		<mw-word id="3">mutta </mw-word>
+		<mw-word id="4">sää </mw-word>
+		<mw-word id="5">on lämmintä. </mw-word>
+	</mw-finnish>
+	<mw-arabic>
+		<mw-word finnish-id="1">في الجنوب </mw-word>
+		<mw-word finnish-id="2">زخات من المطر, </mw-word>
+		<mw-word finnish-id="3">لكن </mw-word>
+		<mw-word finnish-id="4">الطقس </mw-word>
+		<mw-word finnish-id="5">دافئ. </mw-word>
+	</mw-arabic>
+	<mw-tooltips>
+		<mw-tooltip finnish-id="1">
+			<finnish-part id="1">Etelä</finnish-part>
+			<finnish-part id="2"> + ssä</finnish-part>
+			<arabic-part finnish-id="2">في </arabic-part>
+			<arabic-part finnish-id="1">الجنوب</arabic-part>
+		</mw-tooltip>
+	</mw-tooltips>
+</mw-sentence>
+
+<mw-sentence start="7" end="11">
+	<mw-finnish>
+		<mw-word id="1">Sadekuurot </mw-word>
+		<mw-word id="2">ovat mahdollisia </mw-word>
+		<mw-word id="3">myös </mw-word>
+		<mw-word id="4">idässä.</mw-word>
+	</mw-finnish>
+	<mw-arabic>
+		<mw-word finnish-id="1">زخات المطر </mw-word>
+		<mw-word finnish-id="2">ممكنة </mw-word>
+		<mw-word finnish-id="3">ايضا </mw-word>
+		<mw-word finnish-id="4"> في الشرق.</mw-word>
+	</mw-arabic>
+	<mw-tooltips>
+		<mw-tooltip finnish-id="4">
+			<finnish-part id="1">itä</finnish-part>
+			<finnish-part id="2"> + ssä</finnish-part>
+			<arabic-part finnish-id="2">في </arabic-part>
+			<arabic-part finnish-id="1">الشرق</arabic-part>
+		</mw-tooltip>
+	</mw-tooltips>
+</mw-sentence>
+
+<mw-sentence start="11" end="19">
+	<mw-finnish>
+		<mw-word id="1">Muualla on </mw-word>
+		<mw-word id="2">poutaista </mw-word>
+		<mw-word id="3">ja </mw-word>
+		<mw-word id="4">osittain </mw-word>
+		<mw-word id="5">myös </mw-word>
+		<mw-word id="6">aurinkoista. </mw-word>
+	</mw-finnish>
+	<mw-arabic>
+		<mw-word finnish-id="1">في مناطق اخرى </mw-word>
+		<mw-word finnish-id="2">جافة </mw-word>
+		<mw-word finnish-id="3">و </mw-word>
+		<mw-word finnish-id="6">مشمسة </mw-word>
+		<mw-word finnish-id="4">جزئيا </mw-word>
+		<mw-word finnish-id="5">ايضا. </mw-word>
+	</mw-arabic>
+	<mw-tooltips>
+		<mw-tooltip finnish-id="">
+			<finnish-part id="1"></finnish-part>
+			<finnish-part id="2"></finnish-part>
+			<arabic-part finnish-id="1"></arabic-part>
+			<arabic-part finnish-id="2"></arabic-part>
+		</mw-tooltip>
+	</mw-tooltips>
+</mw-sentence>
+
+<mw-sentence start="19" end="25">
+	<mw-finnish>
+		<mw-word id="1">Lämpötila </mw-word>
+		<mw-word id="2">nousee </mw-word>
+		<mw-word id="3">koko </mw-word>
+		<mw-word id="4">maassa </mw-word>
+		<mw-word id="5">lähelle </mw-word>
+		<mw-word id="6">15 astetta.</mw-word>
+	</mw-finnish>
+	<mw-arabic>
+		<mw-word finnish-id="1">درجات الحرارة </mw-word>
+		<mw-word finnish-id="2">ترتفع </mw-word>
+		<mw-word finnish-id="4">كل </mw-word>
+		<mw-word finnish-id="3">في انحاء البلاد </mw-word>
+		<mw-word finnish-id="5">الى قرابة </mw-word>
+		<mw-word finnish-id="6">15 درجة مئوية.</mw-word>
+	</mw-arabic>
+	<mw-tooltips>
+		<mw-tooltip finnish-id="4">
+			<finnish-part id="1">maa</finnish-part>
+			<finnish-part id="2"> + ssa</finnish-part>
+			<arabic-part finnish-id="2">في </arabic-part>
+			<arabic-part finnish-id="1">انحاء البلاد </arabic-part>
+		</mw-tooltip>
+	</mw-tooltips>
+</mw-sentence>
+

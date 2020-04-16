@@ -1,0 +1,220 @@
+<mw-sentence start="0" end="7">
+	<mw-finnish>
+
+		<mw-word id="1">Suomalaiset </mw-word> 
+		<mw-word id="2">juovat </mw-word>
+		<mw-word id="3">alkoholia </mw-word>
+		<mw-word id="4">eri </mw-word>
+		<mw-word id="5">määriä </mw-word>
+		<mw-word id="6">eri </mw-word>
+		<mw-word id="7">puolilla </mw-word>
+		<mw-word id="8">Suomea. </mw-word>
+	</mw-finnish>
+	<mw-arabic>
+		<mw-word finnish-id="1">الفنلنديون </mw-word>
+		<mw-word finnish-id="2">يشربون  </mw-word>
+		<mw-word finnish-id="3">المشروبات الكحولية </mw-word>
+		<mw-word finnish-id="5">بمكيات </mw-word>
+		<mw-word finnish-id="4">مختلفة  </mw-word>
+		<mw-word finnish-id="7">بمناطق </mw-word>
+		<mw-word finnish-id="6">مختلفة  </mw-word>
+		<mw-word finnish-id="8">من فنلندا.</mw-word>
+	</mw-arabic>
+	<mw-tooltips>
+		<mw-tooltip finnish-id="8">
+			<finnish-part id="1">Suomi</finnish-part>
+			<finnish-part id="2">a</finnish-part>
+			<arabic-part finnish-id="2">من</arabic-part>
+			<arabic-part finnish-id="1">فنلندا</arabic-part>
+		</mw-tooltip>
+	</mw-tooltips>
+</mw-sentence>
+
+<mw-sentence start="7" end="14">
+	<mw-finnish>
+		
+		<mw-word id="1">Pohjois-Suomessa </mw-word> <!-- Do we want to put this in two parts or like this?? -->
+		<mw-word id="2">juodaan </mw-word>
+		<mw-word id="3">alkoholia </mw-word>
+		<mw-word id="4">enemmän </mw-word>
+		<mw-word id="5">kuin </mw-word>
+		<mw-word id="6">Etelä-Suomessa. </mw-word> <!-- Do we want to put this in two parts or like this?? -->
+	</mw-finnish>
+	<mw-arabic>
+		<mw-word finnish-id="1">في شمال فنلندا </mw-word>
+		<mw-word finnish-id="2">يشربون </mw-word>
+		<mw-word finnish-id="3">المشروبات الكحولية </mw-word>
+		<mw-word finnish-id="4">اكثر </mw-word>
+		<mw-word finnish-id="5">من </mw-word>
+		<mw-word finnish-id="6">في جنوب فنلندا. </mw-word>
+	</mw-arabic>
+	<mw-tooltips>
+		<mw-tooltip finnish-id="1">
+			<finnish-part id="1">Pohjois-</finnish-part>
+			<finnish-part id="2">Suomi</finnish-part>
+			<finnish-part id="3">ssa</finnish-part>
+			<arabic-part finnish-id="3">في </arabic-part>
+			<arabic-part finnish-id="1">شمال </arabic-part>
+			<arabic-part finnish-id="2">فنلندا </arabic-part>
+		</mw-tooltip>
+		<mw-tooltip finnish-id="6">
+			<finnish-part id="1">Etelä-</finnish-part>
+			<finnish-part id="2">Suomi</finnish-part>
+			<finnish-part id="3"> + ssa</finnish-part>
+			<arabic-part finnish-id="3">في </arabic-part>
+			<arabic-part finnish-id="1">جنوب </arabic-part>
+			<arabic-part finnish-id="2">فنلندا</arabic-part>
+		</mw-tooltip>
+	</mw-tooltips>
+</mw-sentence>
+
+
+<mw-sentence start="14" end="27">
+	<mw-finnish>
+		<mw-word id="1">Lapissa </mw-word> <!--This one we probably want to separate into two parts -->
+		<mw-word id="2">alkoholia </mw-word>
+		<mw-word id="3">kuluu </mw-word>
+		<mw-word id="4">melkein </mw-word>
+		<mw-word id="5">12 litraa</mw-word>
+		<mw-word id="6">aikuista </mw-word>
+		<mw-word id="7">kohti </mw-word>
+		<mw-word id="8">vuodessa, </mw-word>
+		<mw-word id="9">kun </mw-word>
+		<mw-word id="10">se lasketaan </mw-word>
+		<mw-word id="11">sataprosenttisena </mw-word>
+		<mw-word id="12">alkoholina. </mw-word>
+
+	</mw-finnish>
+	<mw-arabic> <!--In this sentence there is an arabic word that don't have a pair in Finnish text. This word should be visible in the god mode. -->
+		<mw-word finnish-id="1">في لابلاند</mw-word>
+		<mw-word finnish-id="3">يستهلك </mw-word>
+		<mw-word finnish-id="4">ما يقارب </mw-word>
+		<mw-word finnish-id="5">12 ليتر </mw-word>
+		<mw-word finnish-id="2">من المشروبات الكحولية </mw-word>
+		<mw-word finnish-id="7">للشخص </mw-word>
+		<mw-word finnish-id="6">البالغ </mw-word>
+		<mw-word finnish-id="8">سنويا, </mw-word>
+		<mw-word finnish-id="9">عندما </mw-word>
+		<mw-word finnish-id="10">تحسب </mw-word>
+		<mw-word finnish-id="11">النسبة الاجمالية </mw-word>
+		<mw-word finnish-id="12">المشروبات الكحولية. </mw-word>
+	</mw-arabic>
+	<mw-tooltips>
+		<mw-tooltip finnish-id="1">
+			<finnish-part id="1">Lappi</finnish-part>
+			<finnish-part id="2">ssa</finnish-part>
+			<arabic-part finnish-id="2">في </arabic-part>
+			<arabic-part finnish-id="1">لابلاند </arabic-part>
+		</mw-tooltip>
+	</mw-tooltips>
+</mw-sentence>
+
+<mw-sentence start="27" end="37">
+	<mw-finnish>
+		<mw-word id="1">Etelässä </mw-word>
+		<mw-word id="2">Ahvenanmaalla </mw-word>
+		<mw-word id="3">alkoholia </mw-word>
+		<mw-word id="4">kuluu </mw-word>
+		<mw-word id="5">vain </mw-word>
+		<mw-word id="6">vähän </mw-word>
+		<mw-word id="7">yli </mw-word>
+		<mw-word id="8">6 litraa </mw-word>
+		<mw-word id="9">aikuista </mw-word>
+		<mw-word id="10">kohti.</mw-word>
+	</mw-finnish>
+	<mw-arabic> <!--In this sentence there is an arabic word that don't have a pair in Finnish text. This word should be visible in the god mode. -->
+		<mw-word finnish-id="1">في الجنوب </mw-word>
+		<mw-word finnish-id="2">في جزر اولاند </mw-word>
+		<mw-word finnish-id="4">يستهلك </mw-word>
+		<mw-word finnish-id="3">الكحول </mw-word>
+		<mw-word finnish-id="5">فقط </mw-word>
+		<mw-word finnish-id="7">اكثر </mw-word>
+		<mw-word finnish-id="6">بقليل </mw-word>
+		<mw-word finnish-id="8">6 ليتر </mw-word>
+		<mw-word finnish-id="10">للشخص </mw-word>
+		<mw-word finnish-id="9">البالغ.</mw-word>
+	</mw-arabic>
+	<mw-tooltips>
+		<mw-tooltip finnish-id="1">
+			<finnish-part id="1">Etelä</finnish-part>
+			<finnish-part id="2">ssä</finnish-part>
+			<arabic-part finnish-id="2">في</arabic-part>
+			<arabic-part finnish-id="1">الجنوب</arabic-part>
+		</mw-tooltip>
+	</mw-tooltips>
+</mw-sentence>
+
+<mw-sentence start="37" end="44">
+	<mw-finnish>
+		<mw-word id="1">Alueiden </mw-word>
+		<mw-word id="2">välillä </mw-word>
+		<mw-word id="3">on eroja </mw-word>
+		<mw-word id="4">myös </mw-word>
+		<mw-word id="5">siinä </mw-word>
+		<mw-word id="6">mitä </mw-word>
+		<mw-word id="7">juodaan. </mw-word>
+	</mw-finnish>
+	<mw-arabic> <!--In this sentence there is an arabic word that don't have a pair in Finnish text. This word should be visible in the god mode. -->
+		<mw-word finnish-id="1">يوجد </mw-word>
+		<mw-word finnish-id="3">اختلاف </mw-word>
+		<mw-word finnish-id="4">ايضا </mw-word>
+		<mw-word finnish-id="2">المناطق </mw-word>
+		<mw-word finnish-id="5">في </mw-word>
+		<mw-word finnish-id="6">ما </mw-word>
+		<mw-word finnish-id="7">يشربونه. </mw-word>
+	</mw-arabic>
+	<mw-tooltips>
+		<mw-tooltip finnish-id="">
+			<finnish-part id="1"></finnish-part>
+			<finnish-part id="2"></finnish-part>
+			<arabic-part finnish-id="1"></arabic-part>
+			<arabic-part finnish-id="2"></arabic-part>
+		</mw-tooltip>
+	</mw-tooltips>
+</mw-sentence>
+
+<mw-sentence start="44" end="48">
+	<mw-finnish>
+		<mw-word id="1">Pohjoisessa </mw-word>
+		<mw-word id="2">juodaan </mw-word>
+		<mw-word id="3">vahvoja </mw-word>
+		<mw-word id="4">alkoholijuomia. </mw-word>
+	</mw-finnish>
+	<mw-arabic>
+		<mw-word finnish-id="1">في الشمال </mw-word>
+		<mw-word finnish-id="2">يشربون </mw-word>
+		<mw-word finnish-id="4">الكحول </mw-word>
+		<mw-word finnish-id="3">القوية. </mw-word>
+	</mw-arabic>
+	<mw-tooltips>
+		<mw-tooltip finnish-id="1">
+			<finnish-part id="1">Pohjoinen</finnish-part>
+			<finnish-part id="2">ssa</finnish-part>
+			<arabic-part finnish-id="2">في </arabic-part>
+			<arabic-part finnish-id="1">الشمال </arabic-part>
+		</mw-tooltip>
+	</mw-tooltips>
+</mw-sentence>
+
+<mw-sentence start="48" end="51">
+	<mw-finnish>
+		<mw-word id="1">Etelässä </mw-word>
+		<mw-word id="2">juodaan </mw-word>
+		<mw-word id="3">viiniä. </mw-word>
+	</mw-finnish>
+	<mw-arabic>
+		<mw-word finnish-id="1">في الجنوب </mw-word>
+		<mw-word finnish-id="2">يشربون </mw-word>
+		<mw-word finnish-id="3">النبيذ.</mw-word>
+	</mw-arabic>
+	<mw-tooltips>
+		<mw-tooltip finnish-id="">
+			<finnish-part id="1">Etelä</finnish-part>
+			<finnish-part id="2">ssä</finnish-part>
+			<arabic-part finnish-id="2">في</arabic-part>
+			<arabic-part finnish-id="1">الجنوب</arabic-part>
+		</mw-tooltip>
+	</mw-tooltips>
+</mw-sentence>
+
+

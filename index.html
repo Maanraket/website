@@ -1,1 +1,52 @@
-hello you!
+<!doctype html>
+	<head>
+		<title>Pixi jizz test</title>
+		<link href="bower_components/bootstrap/dist/css/bootstrap.min.css" type="text/css" rel="stylesheet" />
+		<link href="style.css" type="text/css" rel="stylesheet" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/> <!--320-->
+	</head>
+	<body>
+		<div id="bg"></div>
+		<script src="bower_components/jquery/dist/jquery.js"></script>
+		<script src="bower_components/pixi/bin/pixi.js"></script>
+		<script>
+		// This code loads the IFrame Player API code asynchronously.
+		var tag = document.createElement('script');
+		tag.src = "https://www.youtube.com/iframe_api";
+		var firstScriptTag = document.getElementsByTagName('script')[0];
+		firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+		// This function creates an <iframe> (and YouTube player) after the API code downloads.
+		var player;
+		function onYouTubeIframeAPIReady() {
+		    player = new YT.Player('HR8938Cephei', {
+		        videoId: 'ARNa-TxqZvQ', // YouTube Video ID
+		        width: 0,               // Player width (in px)
+		        height: 0,              // Player height (in px)
+		        playerVars: {
+		          autoplay: 1,        // Auto-play the video on load
+		          controls: 1,        // Show pause/play buttons in player
+		          showinfo: 0,        // Hide the video title
+		          modestbranding: 1,  // Hide the Youtube Logo
+		          loop: 1,            // Run the video in a loop
+		          fs: 0,              // Hide the full screen button
+		          cc_load_policty: 0, // Hide closed captions
+		          iv_load_policy: 3,  // Hide the Video Annotations
+		          autohide: 0         // Hide video controls when playing
+		        }
+		    });
+		}
+		</script>
+		<script src="js/main.js"></script>
+		<div id="controls" style="position:absolute;top:15px;left:15px;padding:10px;background-color:rgba(255,255,255,0.5);border-radius:3px;z-index:101;">
+			Amount of stars <input type="range" id="amountOfStars" value="25000" min="1" max="50000">
+			Destination size <input type="range" id="destinationsize" value="5" min="1" max="10">
+			Velocity <input type="range" id="velocity" value="6" min="0" max="100">
+			Impact of the mouse <input type="range" id="impact" value="10" min="1" max="100">
+			Deviation mulitplier <input type="range" id="deviationmultiplier" value="0.45" min="0" max="10">
+			Stretch <input type="range" id="stretch" value="1.5" min="1" max="8">
+			Mute <input type="checkbox" id="mute-toggle">
+		</div>
+		<div id="HR8938Cephei"></div>
+	</body>
+</html>

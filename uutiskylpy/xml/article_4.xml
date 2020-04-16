@@ -1,0 +1,191 @@
+<mw-sentence start="0" end="3">
+	<mw-finnish>
+		<mw-word id="1">Viikonloppuna </mw-word>
+		<mw-word id="2">on vappu. </mw-word>
+	</mw-finnish>
+	<mw-arabic>
+		<mw-word finnish-id="1">نهاية الاسبوع</mw-word>
+		<mw-word finnish-id="2">يكون عيد العمال.</mw-word>
+	</mw-arabic>
+	<mw-tooltips>
+		<mw-tooltip finnish-id="">
+			<finnish-part id="1"></finnish-part>
+			<finnish-part id="2"></finnish-part>
+			<arabic-part finnish-id="1"></arabic-part>
+			<arabic-part finnish-id="2"></arabic-part>
+		</mw-tooltip>
+	</mw-tooltips>
+</mw-sentence>
+
+<mw-sentence start="3" end="13">
+	<mw-finnish>
+		<mw-word id="1">Vappu </mw-word>
+		<mw-word id="2">on tärkeä </mw-word>
+		<mw-word id="3">juhla </mw-word>
+		<mw-word id="4">opiskelijoille, </mw-word>
+		<mw-word id="5">myös </mw-word>
+		<mw-word id="6">teekkareille </mw-word>
+		<mw-word id="7">eli teknillisten </mw-word>
+		<mw-word id="8">korkeakoulujen </mw-word>
+		<mw-word id="9">opiskelijoille.</mw-word>		
+	</mw-finnish>
+	<mw-arabic>
+		<mw-word finnish-id="1">عيد العمال  </mw-word>
+		<mw-word finnish-id="3">احتفال  </mw-word>
+		<mw-word finnish-id="2">مهم </mw-word>
+		<mw-word finnish-id="4">للطلاب, </mw-word>
+		<mw-word finnish-id="5">وايضا </mw-word>
+		<mw-word finnish-id="6"> لطلاب التكنولوجيا و  </mw-word>
+		<mw-word finnish-id="9">طلاب </mw-word>
+		<mw-word finnish-id="8">المعاهد </mw-word>
+		<mw-word finnish-id="7">التقنية </mw-word>
+	</mw-arabic>
+	<mw-tooltips>
+		<mw-tooltip finnish-id="">
+			<finnish-part id="1"></finnish-part>
+			<finnish-part id="2"></finnish-part>
+			<arabic-part finnish-id="1"></arabic-part>
+			<arabic-part finnish-id="2"></arabic-part>
+		</mw-tooltip>
+	</mw-tooltips>
+</mw-sentence>
+
+<mw-sentence start="13" end="23">
+	<mw-finnish>
+		<mw-word id="1">Eeva Siika-aho ja Pyry Huhtanen </mw-word>
+		<mw-word id="2">kertoivat </mw-word>
+		<mw-word id="3">aamu-tv:ssä</mw-word>
+		<mw-word id="4">teekkarien </mw-word>
+		<mw-word id="5">vapusta. </mw-word>
+	</mw-finnish>
+	<mw-arabic>
+		<mw-word finnish-id="1">ايفا سيكاهو و بورو هوهتانن </mw-word>
+		<mw-word finnish-id="2">ذكروا </mw-word>
+		<mw-word finnish-id="3">في التلفزيون الصباحي </mw-word>
+		<mw-word finnish-id="5">عن عيد عمال </mw-word>
+		<mw-word finnish-id="4">طلاب التكنولوجيا. </mw-word>
+	</mw-arabic>
+	<mw-tooltips>
+		<mw-tooltip finnish-id="3">
+			<finnish-part id="1">aamu-</finnish-part>
+			<finnish-part id="2">tv</finnish-part>
+			<finnish-part id="2"> + ssä</finnish-part>
+			<arabic-part finnish-id="3">في </arabic-part>
+			<arabic-part finnish-id="2">التلفزيون </arabic-part>
+			<arabic-part finnish-id="1">الصباحي </arabic-part>
+		</mw-tooltip>
+	</mw-tooltips>
+</mw-sentence>
+
+<mw-sentence start="23" end="28">
+	<mw-finnish>
+		<mw-word id="1">He opiskelevat </mw-word>
+		<mw-word id="2">Espoon Otaniemessä.</mw-word>
+	</mw-finnish>
+	<mw-arabic>
+		<mw-word>الذين </mw-word>
+		<mw-word finnish-id="1">يدرسون </mw-word>
+		<mw-word finnish-id="2"> في ايسبو اوتانيمي. </mw-word>
+	</mw-arabic>
+	<mw-tooltips>
+		<mw-tooltip finnish-id="">
+			<finnish-part id="1"></finnish-part>
+			<finnish-part id="2"></finnish-part>
+			<arabic-part finnish-id="1"></arabic-part>
+			<arabic-part finnish-id="2"></arabic-part>
+		</mw-tooltip>
+	</mw-tooltips>
+</mw-sentence>
+
+<mw-sentence start="28" end="34">
+	<mw-finnish>
+		<mw-word id="1">Teekkarit </mw-word>
+		<mw-word id="2">ovat tehneet </mw-word>
+		<mw-word id="3">oman </mw-word>
+		<mw-word id="4">vappulehden. </mw-word>
+	</mw-finnish>
+	<mw-arabic>
+		<mw-word finnish-id="1">طلاب التكنولوجيا </mw-word>
+		<mw-word finnish-id="2">اقاموا </mw-word>
+		<mw-word finnish-id="4">مجلة عيد العمال </mw-word>
+		<mw-word finnish-id="3">خاصتهم. </mw-word>
+	</mw-arabic>
+	<mw-tooltips>
+		<mw-tooltip finnish-id="">
+			<finnish-part id="1"></finnish-part>
+			<finnish-part id="2"></finnish-part>
+			<arabic-part finnish-id="1"></arabic-part>
+			<arabic-part finnish-id="2"></arabic-part>
+		</mw-tooltip>
+	</mw-tooltips>
+</mw-sentence>
+
+<mw-sentence start="34" end="44">
+	<mw-finnish>
+		<mw-word id="1">He ovat</mw-word>
+		<mw-word id="2">myös </mw-word>
+		<mw-word id="3">rakentaneet </mw-word>
+		<mw-word id="4">Otaniemeen </mw-word>
+		<mw-word id="5">tosi </mw-word>
+		<mw-word id="6">ison </mw-word>
+		<mw-word id="7">saunan, </mw-word>
+		<mw-word id="8">johon </mw-word>
+		<mw-word id="9">mahtuu </mw-word>
+		<mw-word id="10">300 ihmistä.</mw-word>
+	</mw-finnish>
+	<mw-arabic>
+		<mw-word finnish-id="1">هم </mw-word>
+		<mw-word finnish-id="2">ايضا </mw-word>
+		<mw-word finnish-id="3">بنوا </mw-word>
+		<mw-word finnish-id="4">لاوتانييمي </mw-word>
+		<mw-word finnish-id="7">ساونا </mw-word>
+		<mw-word finnish-id="6">كبيرة </mw-word>
+		<mw-word finnish-id="5">جدا, </mw-word>
+		<mw-word finnish-id="8">التي </mw-word>
+		<mw-word finnish-id="9">تتسع </mw-word>
+		<mw-word finnish-id="10">300 شخص.</mw-word>
+	</mw-arabic>
+	<mw-tooltips>
+		<mw-tooltip finnish-id="">
+			<finnish-part id="1"></finnish-part>
+			<finnish-part id="2"></finnish-part>
+			<arabic-part finnish-id="1"></arabic-part>
+			<arabic-part finnish-id="2"></arabic-part>
+		</mw-tooltip>
+	</mw-tooltips>
+</mw-sentence>
+
+<mw-sentence start="44" end="52">
+	<mw-finnish>
+		<mw-word id="1">Viikonloppuna </mw-word>
+		<mw-word id="2">teekkarit </mw-word>
+		<mw-word id="3">ja </mw-word>
+		<mw-word id="4">muut </mw-word>
+		<mw-word id="5">opiskelijat </mw-word>
+		<mw-word id="6">juhlivat </mw-word>
+		<mw-word id="7">vappua </mw-word>
+		<mw-word id="8">eri </mw-word>
+		<mw-word id="9">puolilla </mw-word>
+		<mw-word id="10">Suomea.</mw-word>
+	</mw-finnish>
+	<mw-arabic>
+		<mw-word finnish-id="1">نهاية الاسبوع</mw-word>
+		<mw-word finnish-id="2">طلاب التكنولوجيا </mw-word>
+		<mw-word finnish-id="3">و </mw-word>
+		<mw-word finnish-id="5">طلاب </mw-word>
+		<mw-word finnish-id="4">اخرون </mw-word>
+		<mw-word finnish-id="6">يحتفلون </mw-word>
+		<mw-word finnish-id="7">بعيد العمال </mw-word>
+		<mw-word finnish-id="9">مناطق </mw-word>
+		<mw-word finnish-id="8">مختلفة </mw-word>
+		<mw-word finnish-id="10">من فنلندا.</mw-word>
+	</mw-arabic>
+	<mw-tooltips>
+		<mw-tooltip finnish-id="10">
+			<finnish-part id="1">Suomi</finnish-part>
+			<finnish-part id="2"> + a</finnish-part>
+			<arabic-part finnish-id="2">من</arabic-part>
+			<arabic-part finnish-id="1">فنلندا</arabic-part>
+		</mw-tooltip>
+	</mw-tooltips>
+</mw-sentence>

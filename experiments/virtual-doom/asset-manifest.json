@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/experiments/virtual-doom/static/css/main.c06891aa.chunk.css",
+    "main.js": "/experiments/virtual-doom/static/js/main.49e03378.chunk.js",
+    "main.js.map": "/experiments/virtual-doom/static/js/main.49e03378.chunk.js.map",
+    "runtime-main.js": "/experiments/virtual-doom/static/js/runtime-main.e174ff75.js",
+    "runtime-main.js.map": "/experiments/virtual-doom/static/js/runtime-main.e174ff75.js.map",
+    "static/js/2.01fe85e2.chunk.js": "/experiments/virtual-doom/static/js/2.01fe85e2.chunk.js",
+    "static/js/2.01fe85e2.chunk.js.map": "/experiments/virtual-doom/static/js/2.01fe85e2.chunk.js.map",
+    "index.html": "/experiments/virtual-doom/index.html",
+    "precache-manifest.48dfe1b9165ad04f53b317fdbf310fa6.js": "/experiments/virtual-doom/precache-manifest.48dfe1b9165ad04f53b317fdbf310fa6.js",
+    "service-worker.js": "/experiments/virtual-doom/service-worker.js",
+    "static/css/main.c06891aa.chunk.css.map": "/experiments/virtual-doom/static/css/main.c06891aa.chunk.css.map",
+    "static/js/2.01fe85e2.chunk.js.LICENSE": "/experiments/virtual-doom/static/js/2.01fe85e2.chunk.js.LICENSE",
+    "static/media/sliding-door.png": "/experiments/virtual-doom/static/media/sliding-door.20fc4b30.png",
+    "static/media/statue.png": "/experiments/virtual-doom/static/media/statue.93683e48.png",
+    "static/media/Wall.module.css": "/experiments/virtual-doom/static/media/texture.77b3bb3f.png",
+    "static/media/Television.module.css": "/experiments/virtual-doom/static/media/tv-furniture.b98c195b.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e174ff75.js",
+    "static/js/2.01fe85e2.chunk.js",
+    "static/css/main.c06891aa.chunk.css",
+    "static/js/main.49e03378.chunk.js"
+  ]
+}

@@ -1,0 +1,217 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta name="author" content="Floris Veldhuizen">
+		<title>triangle animation</title>
+
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+			}
+
+			html, body {
+				height: 100%;
+			}
+
+
+			canvas {
+				display: block;
+				margin: 5auto;
+			}
+		</style>
+	</head>
+
+	<body>
+		<canvas></canvas>
+	
+		<script>
+			(function() {
+				var canvas = document.querySelector( 'canvas' ),
+					context = canvas.getContext( '2d' ),
+
+					width = window.innerWidth,
+					height = window.innerHeight,
+					radius = Math.min( width, height ) * 0.35,
+					quality = 360,
+					speed = 4,
+
+					layers = [],
+					layerSize = radius * 0.4,
+					layerOverlap = Math.round( quality * (1/6) ),
+
+					square = document.createElement( 'canvas' ),
+					line = [],
+					distortionDetail = 20;
+
+				function resize() {
+					canvas.width = width;
+					canvas.height = height;
+				}
+
+				function triangle() {
+					var a = [], b = [], c = [];
+					c.x = width/2,
+					c.y = height/2 - radius;
+					b.x = radius * Math.cos((1/3)*(2*Math.PI)-Math.PI/2) + width/2;
+					b.y = radius * Math.sin((1/3)*(2*Math.PI)-Math.PI/2) + height/2;
+					a.x = radius * Math.cos((2/3)*(2*Math.PI)-Math.PI/2) + width/2;
+					a.y = radius * Math.sin((2/3)*(2*Math.PI)-Math.PI/2) + height/2;
+
+					var q = {
+						onethird : quality / 3,
+						twothirds : quality * (2/3),
+						full : quality
+					}
+
+					for (var i = 0; i < q.full; i++) {
+						if (i > 0 - 1 && i < q.onethird) {
+							layers.push({
+								x: c.x+i*(b.x-c.x)/q.onethird,
+								y: c.y+i*(b.y-c.y)/q.onethird,
+								r: ( i / quality ) * 2 * Math.PI
+							});
+						} else if (i > q.onethird - 1 && i < q.twothirds) {
+							layers.push({
+								x: b.x-(i-q.onethird)*(b.x-a.x)/q.onethird,
+								y: b.y-(i-q.onethird)*(b.y-a.y)/q.onethird,
+								r: ( i / quality ) * 2 * Math.PI
+							});	
+						} else if (i > q.twothirds - 1 && i < q.full){
+							layers.push({
+								x: a.x+(i-q.twothirds)*(c.x-a.x)/q.onethird,
+								y: a.y+(i-q.twothirds)*(c.y-a.y)/q.onethird,
+								r: ( i / quality ) * 2 * Math.PI
+							});
+						}
+
+						layers[i].r += (Math.floor(Math.random()*4))*(0.5*Math.PI);
+					}
+				}
+
+				function draw() {
+					var layersLength = layers.length,
+						size = layerSize,
+						size2 = layerSize / 2;
+
+						context.fillStyle= '#FFF';
+
+					function drawLayer ( layer , overlap) {
+						context.translate ( layer.x , layer.y );
+						context.rotate( layer.r );
+						if(!overlap)
+							context.drawImage(square, -size2 , -size2 );
+						else
+							context.fillRect( -size2*1.2, -size2*1.2, size*1.2, size*1.2 );
+					}
+
+					for (var i = 0; i < layerOverlap; i++) {
+						context.save();
+						context.globalCompositeOperation = 'destination-over';
+						drawLayer( layers[i] );
+						context.restore();
+					}
+						context.save();
+						context.globalCompositeOperation = 'destination-in';
+						drawLayer( layers[layerOverlap] , true );
+						context.restore();
+					
+					for (var i = layerOverlap; i - layerOverlap < layersLength ; i++) {
+						context.save();
+						context.globalCompositeOperation = 'destination-over';
+						drawLayer( layers[(i + layersLength) % layersLength] );
+						context.restore();
+					}
+				}
+
+				function distortedSquare() {
+					function lineDistort() {
+						line = [];
+						for(var i = 0; i < layerSize; i += layerSize/distortionDetail) {
+							var y = Math.random()*(layerSize/30)+layerSize-1-(layerSize/30);
+							line.push({
+								x: i,
+								y: y
+							});
+						}
+					}
+					square.width  = layerSize,
+					square.height = layerSize,
+					squareContext = square.getContext( '2d' );
+
+					squareContext.fillStyle= '#FFF',
+					squareContext.strokeStyle = '#000',
+					squareContext.lineWidth = 1;
+
+					squareContext.beginPath();
+					for(var j = 0; j < 4; j++) {
+						lineDistort();
+						squareContext.translate ( 0 , layerSize );
+						squareContext.rotate(-0.5*Math.PI);
+						for(var k = 0; k < distortionDetail; k++) { 
+							squareContext.lineTo(line[k].x,line[k].y);
+						}
+					}
+					squareContext.closePath();
+					squareContext.fill();
+					squareContext.stroke();
+				}
+
+				function step () {
+					var rotate = speed/100;
+					for( var i = 0; i < layers.length; i++ ) {
+						layers[i].r -= rotate;
+					}
+				}
+
+				function clear() {
+					context.clearRect( 0, 0, canvas.width, canvas.height );
+				}
+
+				function update() {			
+					requestAnimationFrame( update );
+					step();
+					clear();
+					draw();
+				}
+
+				function initialize() {
+					resize();
+					triangle();
+					distortedSquare();
+					update();
+				}
+
+				/**
+				 * rAF polyfill.
+				 */
+				(function() {
+					var lastTime = 0;
+					var vendors = ['ms', 'moz', 'webkit', 'o'];
+					for(var x = 0; x < vendors.length && !window.requestAnimationFrame; ++x) {
+						window.requestAnimationFrame = window[vendors[x]+'RequestAnimationFrame'];
+						window.cancelAnimationFrame = 
+						  window[vendors[x]+'CancelAnimationFrame'] || window[vendors[x]+'CancelRequestAnimationFrame'];
+					}
+
+					if (!window.requestAnimationFrame)
+						window.requestAnimationFrame = function(callback, element) {
+							var currTime = new Date().getTime();
+							var timeToCall = Math.max(0, 16 - (currTime - lastTime));
+							var id = window.setTimeout(function() { callback(currTime + timeToCall); }, 
+							  timeToCall);
+							lastTime = currTime + timeToCall;
+							return id;
+						};
+
+					if (!window.cancelAnimationFrame)
+						window.cancelAnimationFrame = function(id) {
+							clearTimeout(id);
+						};
+				}());
+
+				initialize();
+			})();
+		</script>
+	</body>	
+</html>

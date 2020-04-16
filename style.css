@@ -1,0 +1,35 @@
+body, html{
+	background: #000;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	width: 100%;
+	height: 100%;
+}
+
+#bg{
+	width: 100%;
+	height: 100%;
+	background-image: url('img/warp.jpg');
+	background-size: 100% 100%;
+	opacity: .5;
+}
+
+canvas{
+	position: absolute;
+	z-index: 100;
+	top: 0;
+}
+
+#v{
+	position: absolute;
+	bottom: 50%; 
+	right: 50%;
+	transform: translateX(50%) translateY(50%);
+	min-width: 100%; 
+	min-height: 100%; 
+	width: auto; 
+	height: auto;
+	z-index:  1; 
+	overflow: hidden
+}
