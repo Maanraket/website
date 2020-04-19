@@ -6,6 +6,7 @@ let webcamMode = false;
 TODO:
 create modal window with commands that can be Closed
 create ASCII filter for the canvas
+Make bg image fit the screen properly on mobile
 */
 
 function preload(){
@@ -13,22 +14,21 @@ function preload(){
 }
 
 function setup() {
+  createCanvas(windowWidth, windowHeight);
   imageMode(CENTER);
-	createCanvas(windowWidth, windowHeight);
-  //frame gets divided by 'frameSize' to determine size of next frame
-  frameSize = 1.3;
-  //precalculate values to same computation time based on frameSize
-  redrawFrameSizeParams(frameSize);
-
-  image(img, width/2, height/2, width);
+  image(img, width/2, height/2, width, height);
   noStroke();
   fill(255);
   blendmodes = [BLEND, DARKEST, LIGHTEST, DIFFERENCE, OVERLAY, HARD_LIGHT, SOFT_LIGHT, DODGE, BURN, ADD];
   i = 0;
+  iterateBlendMode();
+
+  //frame gets divided by 'frameSize' to determine size of next frame
+  frameSize = 1.3;
+  redrawFrameSizeParams(frameSize);
 }
 
 function draw(){
-  blendMode(blendmodes[i]);
   if(webcamMode) {
     drawMask();
     image(capture, width/2, height/2, width, height);
@@ -38,8 +38,11 @@ function draw(){
 }
 
 function redrawFrameSizeParams(_frameSize = frameSize){
+  //Precalculates values to same computation time based on frameSize
+  //resizeWidth and resizeHeight are the size of the drawn frame
   resizeWidth = width / frameSize;
   resizeHeight = height / frameSize;
+  //maskPosWidth and maskPosHeight are used to calculate the position of the mask
   maskPosWidth = width/(frameSize*2);
   maskPosHeight = height/(frameSize*2);
 }
@@ -50,7 +53,6 @@ function drawMask(){
   maskImage.rect(0,0,width, height);
   maskImage.erase();
   maskImage.rect(mouseX-maskPosWidth,mouseY-maskPosHeight,resizeWidth,resizeHeight);
-  maskImage.noErase();
   capture.mask(maskImage);
 }
 
@@ -62,7 +64,7 @@ function drawImage(){
 }
 
 function mouseWheel(event) {
-  frameSize += event.delta/100;
+  frameSize += event.delta/300;
   if(frameSize < 1) {
     frameSize = 1;
   }
@@ -78,33 +80,46 @@ function setRandomBackground(){
   });
 }
 
+function refreshBackground(){
+  blendMode(blendmodes[0]);
+  if(webcamMode) {
+    image(capture, width/2, height/2, width, height);
+  } else {
+    image(img, width/2, height/2, width);
+  }
+}
+
+function toggleWebcamMode(){
+  if(!webcamMode){
+    capture = createCapture(VIDEO);
+    capture.size(width, height);
+  } else {
+    capture.remove();
+  }
+  webcamMode = !webcamMode;
+}
+
+function iterateBlendMode(){
+  if(i>blendmodes.length-1) {
+    i = 0;
+  }
+  blendMode(blendmodes[i]);
+  i++;
+}
+
 function keyTyped() {
   if (key==='m') {
-    i++;
-    if(i>blendmodes.length-1) {
-      i = 0;
-    }
-    console.log("BLENDMODE CHANGE! " + blendmodes[i]);
+    print("BLENDMODE CHANGE! " + blendmodes[i]);
+    iterateBlendMode();
   } else if (key==="r") {
     print('REFRESH!');
-    blendMode(blendmodes[0]);
-    if(webcamMode) {
-      image(capture, width/2, height/2, width, height);
-    } else {
-      image(img, width/2, height/2, width);
-    }
+    refreshBackground();
   } else if (key === "p") {
-    console.log("CHANGE MY PICTURE!");
+    print("CHANGE MY PICTURE!");
     setRandomBackground();
   } else if (key === "c") {
-    console.log("TOGGLE WEBCAM MODE!");
-    if(!webcamMode){
-      capture = createCapture(VIDEO);
-      capture.size(width, height);
-    } else {
-      capture.remove();
-    }
-    webcamMode = !webcamMode;
+    print("TOGGLE WEBCAM MODE!");
+    toggleWebcamMode();
   }
 }
 
