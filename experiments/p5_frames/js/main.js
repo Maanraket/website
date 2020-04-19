@@ -2,6 +2,12 @@ let img, c, i, frameSize, resizeWidth, resizeHeight, maskPosWidth, maskPosHeight
 let blendmodes;
 let webcamMode = false;
 
+/*
+TODO:
+create modal window with commands that can be Closed
+create ASCII filter for the canvas
+*/
+
 function preload(){
   img = loadImage('./img/bg.jpeg');
 }
@@ -12,10 +18,7 @@ function setup() {
   //frame gets divided by 'frameSize' to determine size of next frame
   frameSize = 1.3;
   //precalculate values to same computation time based on frameSize
-  resizeWidth = width / frameSize;
-  resizeHeight = height / frameSize;
-  maskPosWidth = width/(frameSize*2);
-  maskPosHeight = height/(frameSize*2);
+  redrawFrameSizeParams(frameSize);
 
   image(img, width/2, height/2, width);
   noStroke();
@@ -36,6 +39,13 @@ function draw(){
   drawImage();
 }
 
+function redrawFrameSizeParams(_frameSize = frameSize){
+  resizeWidth = width / frameSize;
+  resizeHeight = height / frameSize;
+  maskPosWidth = width/(frameSize*2);
+  maskPosHeight = height/(frameSize*2);
+}
+
 function drawMask(){
   // create mask
   const maskImage = createGraphics(width,height);
@@ -51,6 +61,16 @@ function drawImage(){
   c.set();
   c.updatePixels();
   image(c, mouseX, mouseY);
+}
+
+function mouseWheel(event) {
+  frameSize += event.delta/100;
+  if(frameSize < 1) {
+    frameSize = 1;
+  }
+  redrawFrameSizeParams();
+  //uncomment to block page scrolling
+  return false;
 }
 
 function keyTyped() {
@@ -82,4 +102,5 @@ function keyTyped() {
 
 function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
+  redrawFrameSizeParams();
 }
