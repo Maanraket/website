@@ -23,8 +23,6 @@ function setup() {
   image(img, width/2, height/2, width);
   noStroke();
   fill(255);
-  // capture = createCapture(VIDEO);
-  // capture.size(width, height);
   blendmodes = [BLEND, DARKEST, LIGHTEST, DIFFERENCE, OVERLAY, HARD_LIGHT, SOFT_LIGHT, DODGE, BURN, ADD];
   i = 0;
 }
