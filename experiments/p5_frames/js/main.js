@@ -1,7 +1,6 @@
-let img, c, i, capture;
+let img, c, i, frameSize, resizeWidth, resizeHeight, maskPosWidth, maskPosHeight, capture;
 let blendmodes;
 let webcamMode = false;
-let frameSize = 2; //frame gets divided by 'frameSize' to determine size of next frame
 
 function preload(){
   img = loadImage('./img/bg.jpeg');
@@ -10,6 +9,14 @@ function preload(){
 function setup() {
   imageMode(CENTER);
 	createCanvas(windowWidth, windowHeight);
+  //frame gets divided by 'frameSize' to determine size of next frame
+  frameSize = 1.3;
+  //precalculate values to same computation time based on frameSize
+  resizeWidth = width / frameSize;
+  resizeHeight = height / frameSize;
+  maskPosWidth = width/(frameSize*2);
+  maskPosHeight = height/(frameSize*2);
+
   image(img, width/2, height/2, width);
   noStroke();
   fill(255);
@@ -34,23 +41,13 @@ function drawMask(){
   const maskImage = createGraphics(width,height);
   maskImage.rect(0,0,width, height);
   maskImage.erase();
-  maskImage.rect(mouseX-(width/4),mouseY-(height/4),width/frameSize, height/frameSize);
+  maskImage.rect(mouseX-maskPosWidth,mouseY-maskPosHeight,resizeWidth,resizeHeight);
   maskImage.noErase();
   capture.mask(maskImage);
-  // //invert pixels
-  // const imgInverted = createGraphics(width,height);
-  // imgInverted.loadPixels();
-  // maskImage.loadPixels();
-  // for (var i = 3; i < imgInverted.pixels.length; i+=4) {
-  //   imgInverted.pixels[i] = 255-maskImage.pixels[i];
-  // }
-  // imgInverted.updatePixels();
-  // //set mask
-  // capture.mask(imgInverted);
 }
 
 function drawImage(){
-  c.resize(width/frameSize, height/frameSize);
+  c.resize(resizeWidth, resizeHeight);
   c.set();
   c.updatePixels();
   image(c, mouseX, mouseY);
@@ -72,15 +69,14 @@ function keyTyped() {
       image(img, width/2, height/2, width);
     }
   } else if (key === "p") {
-    console.log("CHANGE MY PICTURE");
+    console.log("CHANGE MY PICTURE!");
     img = loadImage('https://picsum.photos/' + width + '/' + height, _img => {
       blendMode(blendmodes[0]);
       image(_img, width/2, height/2, width);
     });
   } else if (key === "c") {
-    console.log("WEBCAM MODE ACTIVATE");
+    console.log("TOGGLE WEBCAM MODE!");
     webcamMode = !webcamMode;
-    // image(capture, 0, 0, width);
   }
 }
 
