@@ -1,6 +1,4 @@
-let img, c, i, frameSize, resizeWidth, resizeHeight, maskPosWidth, maskPosHeight, capture;
-let blendmodes;
-let webcamMode = false;
+let img, c, blendModes, blendModeIterator, frameSize, resizeWidth, resizeHeight, maskPosWidth, maskPosHeight, webcamMode, capture, maskImage;
 
 /*
 TODO:
@@ -17,10 +15,10 @@ function setup() {
   createCanvas(windowWidth, windowHeight);
   imageMode(CENTER);
   image(img, width/2, height/2, width, height);
-  noStroke();
-  fill(255);
-  blendmodes = [BLEND, DARKEST, LIGHTEST, DIFFERENCE, OVERLAY, HARD_LIGHT, SOFT_LIGHT, DODGE, BURN, ADD];
-  i = 0;
+  webcamMode = false;
+  maskImage = createGraphics(width,height);
+  blendModes = [BLEND, DARKEST, LIGHTEST, DIFFERENCE, OVERLAY, HARD_LIGHT, SOFT_LIGHT, DODGE, BURN, ADD];
+  blendModeIterator = 0;
   iterateBlendMode();
 
   //frame gets divided by 'frameSize' to determine size of next frame
@@ -33,13 +31,12 @@ function draw(){
     drawMask();
     image(capture, width/2, height/2, width, height);
   }
-  c = get();
   drawImage();
 }
 
 function redrawFrameSizeParams(_frameSize = frameSize){
-  //Precalculates values to same computation time based on frameSize
-  //resizeWidth and resizeHeight are the size of the drawn frame
+  //Precalculates values based on frameSize to save computation time
+  //resizeWidth and resizeHeight are the dimensions of the drawn frame
   resizeWidth = width / frameSize;
   resizeHeight = height / frameSize;
   //maskPosWidth and maskPosHeight are used to calculate the position of the mask
@@ -49,14 +46,15 @@ function redrawFrameSizeParams(_frameSize = frameSize){
 
 function drawMask(){
   // create mask
-  const maskImage = createGraphics(width,height);
   maskImage.rect(0,0,width, height);
   maskImage.erase();
   maskImage.rect(mouseX-maskPosWidth,mouseY-maskPosHeight,resizeWidth,resizeHeight);
+  maskImage.noErase();
   capture.mask(maskImage);
 }
 
 function drawImage(){
+  c = get();
   c.resize(resizeWidth, resizeHeight);
   c.set();
   c.updatePixels();
@@ -64,10 +62,11 @@ function drawImage(){
 }
 
 function mouseWheel(event) {
-  frameSize += event.delta/300;
+  frameSize -= event.delta/500;
   if(frameSize < 1) {
     frameSize = 1;
   }
+  print("DAYUM DAWG, YOU BE DIVIDIN' Y'ALL FRAME BY " + frameSize + "!");
   redrawFrameSizeParams();
   //uncomment to block page scrolling
   return false;
@@ -75,13 +74,13 @@ function mouseWheel(event) {
 
 function setRandomBackground(){
   img = loadImage('https://picsum.photos/' + width + '/' + height, _img => {
-    blendMode(blendmodes[0]);
-    image(_img, width/2, height/2, width);
+    blendMode(blendModes[0]);
+    image(_img, width/2, height/2, width, height);
   });
 }
 
 function refreshBackground(){
-  blendMode(blendmodes[0]);
+  blendMode(blendModes[0]);
   if(webcamMode) {
     image(capture, width/2, height/2, width, height);
   } else {
@@ -100,16 +99,16 @@ function toggleWebcamMode(){
 }
 
 function iterateBlendMode(){
-  if(i>blendmodes.length-1) {
-    i = 0;
+  if(blendModeIterator>blendModes.length-1) {
+    blendModeIterator = 0;
   }
-  blendMode(blendmodes[i]);
-  i++;
+  blendMode(blendModes[blendModeIterator]);
+  blendModeIterator++;
 }
 
 function keyTyped() {
   if (key==='m') {
-    print("BLENDMODE CHANGE! " + blendmodes[i]);
+    print("BLENDMODE CHANGE! " + blendModes[blendModeIterator]);
     iterateBlendMode();
   } else if (key==="r") {
     print('REFRESH!');
