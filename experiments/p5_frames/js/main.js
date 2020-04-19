@@ -23,8 +23,8 @@ function setup() {
   image(img, width/2, height/2, width);
   noStroke();
   fill(255);
-  capture = createCapture(VIDEO);
-  capture.size(width, height);
+  // capture = createCapture(VIDEO);
+  // capture.size(width, height);
   blendmodes = [BLEND, DARKEST, LIGHTEST, DIFFERENCE, OVERLAY, HARD_LIGHT, SOFT_LIGHT, DODGE, BURN, ADD];
   i = 0;
 }
@@ -73,6 +73,13 @@ function mouseWheel(event) {
   return false;
 }
 
+function setRandomBackground(){
+  img = loadImage('https://picsum.photos/' + width + '/' + height, _img => {
+    blendMode(blendmodes[0]);
+    image(_img, width/2, height/2, width);
+  });
+}
+
 function keyTyped() {
   if (key==='m') {
     i++;
@@ -90,12 +97,15 @@ function keyTyped() {
     }
   } else if (key === "p") {
     console.log("CHANGE MY PICTURE!");
-    img = loadImage('https://picsum.photos/' + width + '/' + height, _img => {
-      blendMode(blendmodes[0]);
-      image(_img, width/2, height/2, width);
-    });
+    setRandomBackground();
   } else if (key === "c") {
     console.log("TOGGLE WEBCAM MODE!");
+    if(!webcamMode){
+      capture = createCapture(VIDEO);
+      capture.size(width, height);
+    } else {
+      capture.remove();
+    }
     webcamMode = !webcamMode;
   }
 }
@@ -103,4 +113,6 @@ function keyTyped() {
 function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
   redrawFrameSizeParams();
+  if(!webcamMode)
+    setRandomBackground();
 }
