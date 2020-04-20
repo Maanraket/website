@@ -1,4 +1,4 @@
-let img, c, blendModes, blendModeIterator, frameSize, resizeWidth, resizeHeight, maskPosWidth, maskPosHeight, webcamMode, capture, maskImage;
+let img, c, blendModes, blendModeIterator, frameSize, resizeWidth, resizeHeight, maskPosWidth, maskPosHeight, webcamMode, capture, maskImage, rotation = 0;
 
 /*
 TODO:
@@ -27,9 +27,14 @@ function setup() {
 }
 
 function draw(){
+  translate(width / 2, height / 2);
+  rotate(rotation);
+  translate(-width / 2, -height / 2);
   if(webcamMode) {
     drawMask();
     image(capture, width/2, height/2, width, height);
+    // rotate(-2);
+    // blendMode(BLEND);
   }
   drawImage();
 }
@@ -70,6 +75,16 @@ function mouseWheel(event) {
   redrawFrameSizeParams();
   //uncomment to block page scrolling
   return false;
+}
+let oldMouseX = 0;
+
+function mousePressed() {
+  oldMouseX = mouseX;
+}
+
+function mouseDragged() {
+  rotation += (oldMouseX - mouseX) / 100;
+  oldMouseX = mouseX;
 }
 
 function setRandomBackground(){
