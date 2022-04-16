@@ -2,6 +2,7 @@
 <html>
 	<head>
 		<title>Chess</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<style type="text/css">
 		canvas{
 			width: 768px;
@@ -34,6 +35,24 @@
 		var score = 0;
 
 		console.log('game start!');
+
+    const eroticFunction = () => {
+      const suck = {
+        myDick: (size = 8) => console.log(`suck my ${size}" dick`),
+        myPenis: "yes please"
+      }
+
+      suck.myDick('"moderately sized');
+      const gezeik = "wat een kutgezeik zeg, jeetje!"
+      var ellende = "oh nee"
+      
+      const D = 8
+      do {
+        suck.myDick()
+      } while (8===D && "pussy"==="wet")
+
+      console.log("^___^");
+    }
 
 
 		$(document).ready(function(){
@@ -75,11 +94,11 @@
 			      findMove(dx,dy, this);
 			    }
 			
-			    return possibleMoves;
+        return possibleMoves;
 			};
 
 			//game level (walkability)
-			matrix = [
+			oldMatrix = [
 			    [0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 1, 0],
 			    [1, 0, 0, 0, 1, 0, 0, 1, 0, 1, 0, 1],
 			    [0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 1, 0],
@@ -93,6 +112,35 @@
 			    [1, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1],
 			    [0, 0, 1, 0, 0, 0, 1, 0, 1, 0, 1, 0]
 			];
+
+      /* rules for the matrix:
+
+      TODO:
+      There can be no nodes that are completely walled off from 9 sides
+      prevent a L shape in the generation
+
+      right now:
+      The starting place (0,0) should be zero always
+      ~25% of the squares will be generated as a wall
+
+     */
+
+			const buildMatrix = () => {
+        const matrixArray = [];
+				for(let i = 0; i < 12; i++) {
+          const row = [];
+					for(let j = 0; j < 12; j++) {
+            const square = Math.round(Math.random()*4) < 3 ? 0 : 1;
+            row.push(square);
+					}
+          matrixArray.push(row);
+				}
+        matrixArray[0][0] = 0;
+        return matrixArray;
+			}
+
+      matrix = buildMatrix();
+
 			var grid = new PF.Grid(matrix);
 			
 			var finder = new PF.AStarFinder({
@@ -159,8 +207,9 @@
 
 				//main character
 				mainCharacter = game.add.sprite(0,0,'main-character');
-				mainCharacter.oldPosition = {x:0,y:0};
-				mainCharacter.oldMoves = [];
+				mainCharacter.currentPosition = {x:0,y:0};
+				mainCharacter.currentMoves = [];
+        mainCharacter.unfilteredMoves = [];
 				mainCharacter.width = 24;
 				mainCharacter.height = 35;
 				mainCharacter.anchor.x = -0.475;
@@ -197,21 +246,42 @@
 				uiOverlay.endFill();
 			}
 
-			var getMainMoves = function(forceLegal){
+      const movesCalculator = (node, getGridFunction) => {
+        const tempGrid = getGridFunction();
+        tempGrid.piece= "queen";
+        tempGrid.getNeighbors = getChessNeighbors;
+        const moves = tempGrid.getNeighbors(node, null);
+        return moves;
+      }
+
+      const positionCheck = (position, type) => {
+        for(var i = 0; i < mainCharacter[type].length && !position; i++){
+          position = (mainCharacter[type][i].x == Math.floor(mainCharacter.x/tileSize) && mainCharacter[type][i].y == Math.floor(mainCharacter.y/tileSize));
+        }
+        return position;
+      }
+
+			var getMainMoves = async function(forceLegal){
 				//First, check if our move was legal. Based on previously determined legal moves/current position
-				var legalMove = (forceLegal === true);
-				for(var  i =0; i < mainCharacter.oldMoves.length && !legalMove; i++){
-					legalMove = (mainCharacter.oldMoves[i].x == Math.floor(mainCharacter.x/tileSize) && mainCharacter.oldMoves[i].y == Math.floor(mainCharacter.y/tileSize));
-				}
-				for(var  i =0; i < enemies.children.length && !legalMove; i++){
-					legalMove =(Math.floor(enemies.children[i].x/tileSize) == Math.floor(mainCharacter.x/tileSize) && Math.floor(enemies.children[i].y/tileSize) == Math.floor(mainCharacter.y/tileSize));
-				}
+				let legalMove = (forceLegal === true);
+        let legalPosition = false;
+        let unfilteredPosition = false;
+        let enemyOverlap = false;
+        
+        if(!legalMove) {
+          legalPosition = positionCheck(legalPosition, "currentMoves");
+          unfilteredPosition = positionCheck(unfilteredPosition, "unfilteredMoves");
+          for(var i = 0; i < enemies.children.length && !enemyOverlap; i++){
+            enemyOverlap = (Math.floor(enemies.children[i].x/tileSize) == Math.floor(mainCharacter.x/tileSize) && Math.floor(enemies.children[i].y/tileSize) == Math.floor(mainCharacter.y/tileSize));
+          }
+          legalMove = legalPosition || (unfilteredPosition && enemyOverlap);
+        }
 				//If the move is legal, move the character, get new possible moves and draw those.
 				if(legalMove){
 					//erase possible moves
 					uiOverlay.clear();
 					//move character
-					mainCharacter.oldPosition = {x: mainCharacter.x, y: mainCharacter.y};
+					mainCharacter.currentPosition = {x: mainCharacter.x, y: mainCharacter.y};
 					var x = Math.floor(mainCharacter.x / tileSize);
 					var y = Math.floor(mainCharacter.y / tileSize);
 					//
@@ -234,7 +304,7 @@
 							}
 						}
 					}
-					moveEnemies();
+					await moveEnemies();
 					if(enemyKilled){
 						addRandomEnemy();
 						addRandomEnemy();
@@ -246,16 +316,15 @@
 						$('body').append('<h1><a href="index.html">Game over :( - Play again!</a></h1>');
 						return;
 					}
-					currentGrid = getUpdatedGrid();
-					currentGrid.piece="queen";
-					currentGrid.getNeighbors = getChessNeighbors;
-					var moves = currentGrid.getNeighbors(node, null);
-					mainCharacter.oldMoves = moves;
-					drawMoves(moves, x, y);
+
+          mainCharacter.currentMoves = movesCalculator(node, getUpdatedGrid);
+          mainCharacter.unfilteredMoves = movesCalculator(node, () => grid.clone());
+
+					drawMoves(mainCharacter.currentMoves, x, y);
 				} // If the move was illegal, return the character back to its original position. 
 				else {
-					mainCharacter.x = mainCharacter.oldPosition.x;
-					mainCharacter.y = mainCharacter.oldPosition.y;
+					mainCharacter.x = mainCharacter.currentPosition.x;
+					mainCharacter.y = mainCharacter.currentPosition.y;
 				}
 			}
 
@@ -269,7 +338,7 @@
 				return newGrid;
 			}
 
-			var moveEnemies = function(){
+			var moveEnemies = async function(){
 				for(var i = 0; i < enemies.children.length; i++){
 					var x = Math.floor(enemies.children[i].x/tileSize);
 					var y = Math.floor(enemies.children[i].y/tileSize);
@@ -277,9 +346,33 @@
 					currentGrid.piece = enemies.children[i].piece;
 					currentGrid.getNeighbors = getChessNeighbors;
 					var path = finder.findPath(x,y, Math.floor(mainCharacter.x/tileSize),Math.floor(mainCharacter.y/tileSize), currentGrid);
+					const numFrames = 10
+					async function animate(sourceX, sourceY, targetX, targetY, t) {
+						if (t >= 1) {
+							enemies.children[i].x = targetX;
+							enemies.children[i].y = targetY;
+							return
+						}
+						tsqrt = Math.sqrt(t)
+						const diffX = targetX - sourceX
+						const diffY = targetY - sourceY 
+						const newX = sourceX + tsqrt * diffX
+						const newY = sourceY + tsqrt * diffY
+						enemies.children[i].x = newX;
+						enemies.children[i].y = newY;
+						return new Promise((resolve) => requestAnimationFrame(async () => {
+							await animate(sourceX, sourceY, targetX, targetY, t + 1 / numFrames)
+							resolve()
+						}))
+					}
 					if(path.length > 0){
-						enemies.children[i].x = path[1][0]*tileSize;
-						enemies.children[i].y = path[1][1]*tileSize;
+						const sourceX = enemies.children[i].x
+						const targetX = path[1][0]*tileSize
+
+						const sourceY = enemies.children[i].y
+						const targetY = path[1][1]*tileSize	
+
+						await animate(sourceX, sourceY, targetX, targetY, 0)
 					}
 				}
 			}
@@ -303,7 +396,7 @@
 				}
 			}
 
-			var game = new Phaser.Game(tileSize * matrix.length, tileSize * matrix.length, Phaser.CANVAS, 'chess', { preload: preload, create: create, update: update, render: render });
+			var game = new Phaser.Game(tileSize * matrix.length, tileSize * matrix.length, Phaser.CANVAS, 'chess', { preload: preload, create: create, update: update, render: render }, false, false);
 		})
 		</script>
 	</body>
