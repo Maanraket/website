@@ -6,8 +6,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<style type="text/css">
 		canvas {
-			max-width: max(768px, 100vw);
-			max-height: max(768px, 100vh);
+			width: min(768px, 80vw)!important;
+			height: auto!important;
+			aspect-ratio: 1;
 			margin: auto;
 			outline: 10px solid #000;
 			margin-top: 20px;
@@ -35,7 +36,7 @@
 	<script type="text/javascript">
 		var findPath, matrix;
 
-		var tileSize = Math.min(48, (window.innerWidth - 50) / 12);
+		var tileSize = 48;
 
 		var score = 0;
 
