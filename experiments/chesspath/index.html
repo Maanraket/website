@@ -7,7 +7,7 @@
 	<style type="text/css">
 		canvas {
 			max-width: max(768px, 100vw);
-			max-height: max(768px, 100vw);
+			max-height: max(768px, 100vh);
 			margin: auto;
 			outline: 10px solid #000;
 			margin-top: 20px;
@@ -35,7 +35,7 @@
 	<script type="text/javascript">
 		var findPath, matrix;
 
-		var tileSize = 48;
+		var tileSize = Math.min(48, (window.innerWidth - 50) / 12);
 
 		var score = 0;
 
