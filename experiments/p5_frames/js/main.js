@@ -27,16 +27,18 @@ function setup() {
 }
 
 function draw(){
+  push();
   translate(width / 2, height / 2);
   rotate(rotation);
-  translate(-width / 2, -height / 2);
   if(webcamMode) {
     drawMask();
     image(capture, width/2, height/2, width, height);
-    // rotate(-2);
-    // blendMode(BLEND);
   }
   drawImage();
+  pop();
+  const d = get();
+  // scale(-1, 1);
+  image(d, 0, height / 2, width, height);
 }
 
 function redrawFrameSizeParams(_frameSize = frameSize){

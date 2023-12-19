@@ -138,7 +138,7 @@ $(document).ready(function(){
 		//animate with starting positions of x and y
 		if(animationPlay){
 			var zoomFactor = Math.pow(xLength / _width / 1000, .75);
-			animationPosition = Math.sin(animationCounter*2*Math.PI)*-500+100;
+			animationPosition = 0//Math.sin(animationCounter*2*Math.PI)*-500+100;
 			animationCounter += animationSpeed * zoomFactor;
 		}
 		FractalFilter.uniforms.zoomLevel.value = _width / xLength;
